@@ -1,0 +1,8 @@
+.meals{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:0.7rem;
+}
+.meal{
+   background-color: #6096B4 ; 
+}
