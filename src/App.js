@@ -1,52 +1,41 @@
-// import React, { useState } from 'react';
+import React, { useState } from 'react';
 
-// import { getUniqueId } from './utility/uniqueId';
-// import NewProduct from './components/products/NewProduct';
-// import Products from './components/products/Products';
+import { getUniqueId } from './utility/uniqueId';
+import NewRecipe from './components/recipes/NewRecipe';
+import Recipes from './components/recipes/Recipes';
 
-// const productsDummyData = [
-//     {
-//         id: getUniqueId(),
-//         title: 'product a',
-//         price: 32.5,
-//         category: 'men',
-//         description: 'dummy description goes here'
-//     }
-// ];
-
-// const App = () => {
-//     const [products, setProducts] = useState(productsDummyData);
-
-//     const handleAddProduct = (value) => {
-//         const newProduct = { id: getUniqueId(), ...value };
-//         // update the products state with the newProduct
-//         newProduct.price = +newProduct.price
-//         const existingProducts = [...products]
-//         existingProducts.push(newProduct)
-//         setProducts(existingProducts)
-//     };
-
-//     return (
-//         <div className="container">
-//             <NewProduct handleAddProduct={handleAddProduct}  />
-//             <Products products={products} />
-//         </div>
-        
-//     );
-// };
-
-// export default App;
-import React from 'react'
-
-
-import Form from './component/Form'
+const recipesDummyData = [
+    {
+        id: getUniqueId(),
+        food: "rice",
+        country: "Nigeria",
+        image: ""
+    }
+];
 
 const App = () => {
-  return (
-    <div>
-     <Form />
-    </div>
-  )
-}
+    const [recipes , setRecipes ] = useState(recipesDummyData);
 
-export default App
+    const handleAddRecipe = (value) => {
+        const newRecipe= { id: getUniqueId(), ...value };
+        const existingRecipes = [...recipes]
+        existingRecipes.push(newRecipe)
+        setRecipes(existingRecipes)
+    };
+
+    const handleDelete = (id) => { 
+        const existingRecipes = [...recipes]
+        const filteredRecipe = existingRecipes.filter((recipe)=>recipe.id !== id);
+        setRecipes(filteredRecipe)
+     };
+
+    return (
+        <div className="container">
+            <NewRecipe handleAddRecipe={handleAddRecipe}  />
+            <Recipes recipes ={recipes} handleDelete={handleDelete} />
+        </div>
+        
+    );
+};
+
+export default App;
