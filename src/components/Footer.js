@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -8,23 +9,23 @@ const Footer = () => {
                     <p className="mx-auto mt-6 max-w-md text-center leading-relaxed font-bold">Int-ISA - Group I</p>
                 </div>
 
-                <nav aria-label="Footer Nav" className="mt-12">
+                <nav aria-label="Footer Nav" className="mt-4">
                     <ul className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
                         <li>
-                            <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
+                            <NavLink to="/about" className="text-gray-700 transition hover:text-gray-700/75">
                                 About Us
-                            </a>
+                            </NavLink>
                         </li>
 
                         <li>
-                            <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                Contact us
-                            </a>
+                            <NavLink to="/contact" className="text-gray-700 transition hover:text-gray-700/75">
+                                Contact Us
+                            </NavLink>
                         </li>
                     </ul>
                 </nav>
 
-                <ul className="mt-12 flex justify-center gap-6 md:gap-8">
+                <ul className="mt-4 flex justify-center gap-6 md:gap-8">
                     <li>
                         <a href="/" rel="noreferrer" target="_blank" className="text-gray-700 transition hover:text-gray-700/75">
                             <span className="sr-only">GitHub</span>

@@ -1,17 +1,18 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
         <header aria-label="Site Header" className="border-b border-gray-100">
             <div className="mx-auto flex h-16 max-w-screen-2xl items-center justify-between sm:px-6 lg:px-8">
                 <div className="flex items-center gap-4">
-                    <button type="button" className="p-2 lg:hidden">
+                    <button type="button" className="p-2 sm:hidden">
                         <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
 
-                    <a href="#/" className="flex">
+                    <NavLink to="/" className="flex">
                         <span className="sr-only">Logo</span>
 
                         <svg className="h-8" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,18 +23,20 @@ const Header = () => {
                         </svg>
 
                         <span className="text-xl font-semibold ml-2 mt-1">Group I</span>
-                    </a>
+                    </NavLink>
                 </div>
 
                 <div className="flex flex-1 items-center justify-end gap-8">
-                    <nav aria-label="Site Nav" className="hidden lg:flex lg:gap-4 lg:text-xs lg:font-bold lg:uppercase lg:tracking-wide lg:text-gray-500">
-                        <a href="/about" className="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700">
+                    <nav aria-label="Site Nav" className="hidden sm:flex sm:gap-4 sm:text-xs sm:font-bold sm:uppercase sm:tracking-wide sm:text-gray-500">
+                        <NavLink to="/" className="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700">
+                            Home
+                        </NavLink>
+                        <NavLink to="/about" className="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700">
                             About
-                        </a>
-
-                        <a href="/contact" className="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700">
+                        </NavLink>
+                        <NavLink to="/contact" className="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700">
                             Contact
-                        </a>
+                        </NavLink>
                     </nav>
                 </div>
             </div>
