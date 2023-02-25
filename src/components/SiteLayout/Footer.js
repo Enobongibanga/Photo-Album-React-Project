@@ -27,7 +27,7 @@ const Footer = () => {
 
                 <ul className="mt-4 flex justify-center gap-6 md:gap-8">
                     <li>
-                        <a href="/" rel="noreferrer" target="_blank" className="text-gray-700 transition hover:text-gray-700/75">
+                        <a href="/src/pages" rel="noreferrer" target="_blank" className="text-gray-700 transition hover:text-gray-700/75">
                             <span className="sr-only">GitHub</span>
                             <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path

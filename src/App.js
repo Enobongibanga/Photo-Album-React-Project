@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 import Pages from './pages/Pages';
-import Footer from './components/Footer';
-import Header from './components/Header';
+import Footer from './components/SiteLayout/Footer';
+import Header from './components/SiteLayout/Header';
 
 const App = () => {
     return (
