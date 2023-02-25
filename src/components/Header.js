@@ -28,13 +28,13 @@ const Header = () => {
 
                 <div className="flex flex-1 items-center justify-end gap-8">
                     <nav aria-label="Site Nav" className="hidden sm:flex sm:gap-4 sm:text-xs sm:font-bold sm:uppercase sm:tracking-wide sm:text-gray-500">
-                        <NavLink to="/" className="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700">
+                        <NavLink to="/" className="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700 focus:text-red-700 active:text-red-700">
                             Home
                         </NavLink>
-                        <NavLink to="/about" className="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700">
+                        <NavLink to="/about" className="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700 focus:text-red-700 active:text-red-700">
                             About
                         </NavLink>
-                        <NavLink to="/contact" className="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700">
+                        <NavLink to="/contact" className="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700 focus:text-red-700 active:text-red-700">
                             Contact
                         </NavLink>
                     </nav>
