@@ -24,7 +24,7 @@ const Popular = () => {
     };
 
     return (
-        <div className="md:max-w-6xl mx-auto px-4 pb-4 md:mt-0 md:pb-0 lg:px-0">
+        <div className="md:max-w-6xl mx-auto px-4 pb-4 md:mt-0 md:pb-0 lg:px-0 mb-16 md:mb-24">
             <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl mb-6">Popular Recipes</h1>
             {/*<div className="md:max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 px-4 lg:px-0">*/}
                 <Splide options={{

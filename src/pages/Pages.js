@@ -6,6 +6,7 @@ import Contact from './Contact';
 import About from './About';
 import NotFound from './NotFound';
 import AddRecipe from './AddRecipe';
+import RecipeCategory from './RecipeCategory';
 
 function Pages() {
     return (
@@ -14,7 +15,9 @@ function Pages() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/addrecipe" element={<AddRecipe />} />
+            <Route path="/cuisine/:type" element={<RecipeCategory />}/>
             <Route path="*" element={<NotFound />} />
+
         </Routes>
     );
 }
