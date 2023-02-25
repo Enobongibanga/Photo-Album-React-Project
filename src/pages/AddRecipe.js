@@ -45,12 +45,12 @@ const AddRecipe = () => {
     return (
         <section>
             <div className="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
-                    <div className="flex justify-between gap-12">
-                        <NewRecipe handleAddRecipe={handleAddRecipe} />
-                        <ul className="flex justify-between w-full flex-wrap gap-4">
-                            <Recipes recipes={recipes} handleDelete={handleDelete} />
-                        </ul>
-                    </div>
+                <div className="flex justify-between gap-12">
+                    <NewRecipe handleAddRecipe={handleAddRecipe} />
+                    <ul className="flex justify-between w-full flex-wrap gap-4">
+                        <Recipes recipes={recipes} handleDelete={handleDelete} />
+                    </ul>
+                </div>
             </div>
         </section>
     );
