@@ -11,7 +11,7 @@ const Popular = () => {
         const api = await fetch(`https://www.themealdb.com/api/json/v1/1/categories.php`);
         const data = await api.json();
         setPopular(data.meals);
-        // setPopular(data.recipes);
+        // setPopular(data.LocalRecipes);
         console.log(data);
     };
 

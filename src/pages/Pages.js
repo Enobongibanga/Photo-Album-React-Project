@@ -5,13 +5,15 @@ import Home from './Home';
 import Contact from './Contact';
 import About from './About';
 import NotFound from './NotFound';
+import AddRecipe from './AddRecipe';
 
 function Pages() {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/addrecipe" element={<AddRecipe />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
     );
