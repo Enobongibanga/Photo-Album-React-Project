@@ -1,33 +1,16 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
     return (
         <footer aria-label="Site Footer" className="bg-gray-100">
             <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
                 <div className="flex justify-center text-teal-600">
-                    <p className="mx-auto mt-6 max-w-md text-center leading-relaxed font-bold">Int-ISA - Group I</p>
+                    <p className="mx-auto mt-6 max-w-md text-center leading-relaxed font-bold">Int-fa7 - Group I</p>
                 </div>
-
-                <nav aria-label="Footer Nav" className="mt-4">
-                    <ul className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
-                        <li>
-                            <NavLink to="/about" className="text-gray-700 transition hover:text-gray-700/75">
-                                About Us
-                            </NavLink>
-                        </li>
-
-                        <li>
-                            <NavLink to="/contact" className="text-gray-700 transition hover:text-gray-700/75">
-                                Contact Us
-                            </NavLink>
-                        </li>
-                    </ul>
-                </nav>
 
                 <ul className="mt-4 flex justify-center gap-6 md:gap-8">
                     <li>
-                        <a href="/src/pages" rel="noreferrer" target="_blank" className="text-gray-700 transition hover:text-gray-700/75">
+                        <a href="https://github.com/Enobongibanga/Photo-Album-React-Project" rel="noreferrer" target="_blank" className="text-gray-700 transition hover:text-gray-700/75">
                             <span className="sr-only">GitHub</span>
                             <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path

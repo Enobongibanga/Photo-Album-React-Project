@@ -1,29 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-const RecipeCategory = () => {
-    const [cuisine, setCuisine] = useState([]);
+const SearchedRecipe = () => {
+    const [searchedRecipes, setSearchedRecipes] = useState([]);
     let params = useParams();
 
-    const getCuisine = async (name) => {
-        const checkLocalStorage = localStorage.getItem('cuisine');
+    const getSearched = async (name) => {
+        const checkLocalStorage = localStorage.getItem('searchedRecipes');
         if (checkLocalStorage) {
-            setCuisine(JSON.parse(checkLocalStorage));
+            setSearchedRecipes(JSON.parse(checkLocalStorage));
         } else {
-            const api = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}`);
-            const recipes = await api.json();
+            const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=&{name}`);
+            const recipes = await data.json();
 
-            localStorage.setItem('cuisine', JSON.stringify(recipes.recipes));
-            setCuisine(recipes.results);
+            localStorage.setItem('searchedRecipes', JSON.stringify(recipes.recipes));
+            setSearchedRecipes(recipes.results);
         }
     };
 
     useEffect(() => {
-        getCuisine(params.type);
-    }, [params.type]);
+        getSearched(params.search);
+    }, [params.search]);
+
     return (
         <div className="flex justify-between flex-wrap">
-            {cuisine.map((item) => {
+            {searchedRecipes.map((item) => {
                 return (
                     <article className="group" key={item.id}>
                         <Link to={'/recipe/' + item.id}>
@@ -44,4 +45,4 @@ const RecipeCategory = () => {
     );
 };
 
-export default RecipeCategory;
+export default SearchedRecipe;

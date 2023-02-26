@@ -1,19 +1,20 @@
 import React from 'react';
-// import FoodCategories from '../components/FoodCategories';
-// import LocalRecipe from '../components/LocalRecipe';
-// import SearchRecipe from '../components/SearchRecipe';
+
 import Popular from '../components/ForeignRecipe/Popular';
 import Veggies from '../components/ForeignRecipe/Veggies';
+import RecipeCategories from '../components/RecipeCategories';
+import SearchRecipe from '../components/SearchRecipe';
 
 const Home = () => {
     return (
         <main>
-            {/*<SearchRecipe />*/}
+            <SearchRecipe />
+
+            <RecipeCategories />
 
             <Popular />
 
             <Veggies />
-
         </main>
     );
 };
