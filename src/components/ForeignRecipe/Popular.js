@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Popular = () => {
@@ -25,40 +23,27 @@ const Popular = () => {
     };
 
     return (
-        <div className="md:max-w-6xl mx-auto px-4 pb-4 md:mt-0 md:pb-0 lg:px-0 mb-16 md:mb-24">
-            <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl mb-6">Popular Recipes</h1>
-            {/*<div className="md:max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 px-4 lg:px-0">*/}
-            <Splide
-                options={{
-                    perPage: 4,
-                    drag: 'free',
-                    gap: '3rem'
-                }}>
-                {popular.map((recipe) => {
-                    return (
-                        <SplideSlide key={recipe.id}>
-                            <Link to={'/recipe/' + recipe.id}>
-                                <article className="block md:hover:opacity-60 flex flex-col h-full">
-                                    <img
-                                        width="840"
-                                        height="1200"
-                                        src={recipe.image}
-                                        className="object-cover self-center w-full h-80 rounded-t"
-                                        alt={recipe.sourceName}
-                                        decoding="async"
-                                        loading="eager"
-                                        data-pin-nopin="true"
-                                        sizes="(max-width: 840px) 100vw, 840px"
-                                    />
-                                    <p className="w-full relative bg-yellow-500 px-2 sm:px-6 py-2 mx-auto text-white bg-yellow-500 text-xs font-bold tracking-wide">{recipe.title}</p>
-                                </article>
-                            </Link>
-                        </SplideSlide>
-                    );
-                })}
-            </Splide>
-            {/*</div>*/}
-        </div>
+        <section className="text-gray-600">
+            <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl mb-6 text-center">Popular Recipes</h1>
+            <div className="container px-5 py-24 mx-auto">
+                <div className="flex flex-wrap -m-4">
+                    {popular.map((recipe) => {
+                        return (
+                            <div key={recipe.id} className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                                <Link to={'/recipe/' + recipe.id}>
+                                    <div className="block relative h-48 rounded overflow-hidden">
+                                        <img className="object-cover object-center w-full h-full block" src={recipe.image} alt={recipe.sourceName} decoding="async" loading="eager" />
+                                    </div>
+                                    <div className="mt-4">
+                                        <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{recipe.title}</h3>
+                                    </div>
+                                </Link>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+        </section>
     );
 };
 

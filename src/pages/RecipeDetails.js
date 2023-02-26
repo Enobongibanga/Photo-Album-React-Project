@@ -38,6 +38,8 @@ const RecipeDetails = () => {
                         <div className="mt-4">
                             <div className="prose max-w-none">
                                 <p dangerouslySetInnerHTML={{ __html: details.summary }}></p>
+                                <p className="text-gray-900 title-font text-sm font-medium capitalize" dangerouslySetInnerHTML={{ __html: details.dishTypes }}></p>
+                                <p className="text-gray-900 title-font text-sm font-medium capitalize" dangerouslySetInnerHTML={{ __html: details.occasions }}></p>
                             </div>
                         </div>
                     </div>
