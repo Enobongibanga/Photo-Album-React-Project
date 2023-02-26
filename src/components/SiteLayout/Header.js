@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <header aria-label="Site Header" className="border-b border-gray-100">
             <div className="mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-6 lg:px-8">
-                <NavLink to="/" className="flex text-teal-700 flex justify-center w-full">
+                <NavLink to="/" className="flex text-teal-700 w-full">
                     <span className="sr-only">Logo</span>
 
                     <svg className="h-8" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,10 +18,13 @@ const Header = () => {
                     <span className="text-xl md:text-3xl font-semibold ml-2 mt-1">React Group project - Group I</span>
                 </NavLink>
 
-                <div className="flex flex-1 items-center justify-end gap-8 hidden ">
-                    <nav aria-label="Site Nav" className=" sm:gap-4 text-xs font-bold uppercase tracking-wide text-gray-500">
+                <div className="flex items-center justify-end gap-8 w-full">
+                    <nav aria-label="Site Nav" className="flex sm:gap-4 text-xs font-bold uppercase tracking-wide text-gray-500">
                         <NavLink to="/" className="block h-16 border-b-4 border-transparent leading-[4rem] border-current hover:text-red-700 focus:text-red-700 active:text-red-700">
                             Home
+                        </NavLink>
+                        <NavLink to="/addrecipe" className="inline-block h-16 border-b-4 border-transparent leading-[4rem] border-current hover:text-red-700 focus:text-red-700 active:text-red-700">
+                            Add Recipe
                         </NavLink>
                     </nav>
                 </div>
