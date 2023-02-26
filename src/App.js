@@ -1,40 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
-import { getUniqueId } from './utility/uniqueId';
-import NewRecipe from './components/recipes/NewRecipe';
-import Recipes from './components/recipes/Recipes';
+import Pages from './pages/Pages';
 
-const recipesDummyData = [
-    {
-        id: getUniqueId(),
-        food: "rice",
-        country: "Nigeria",
-        image: ""
-    }
-];
+import Footer from './components/SiteLayout/Footer';
+import Header from './components/SiteLayout/Header';
+// import RecipeCategories from './components/RecipeCategories';
+// import SearchRecipe from './components/SearchRecipe';
 
 const App = () => {
-    const [recipes , setRecipes ] = useState(recipesDummyData);
-
-    const handleAddRecipe = (value) => {
-        const newRecipe= { id: getUniqueId(), ...value };
-        const existingRecipes = [...recipes]
-        existingRecipes.push(newRecipe)
-        setRecipes(existingRecipes)
-    };
-
-    const handleDelete = (id) => { 
-        const existingRecipes = [...recipes]
-        const filteredRecipe = existingRecipes.filter((recipe)=>recipe.id !== id);
-        setRecipes(filteredRecipe)
-     };
-
     return (
-        <div className="container">
-            <NewRecipe handleAddRecipe={handleAddRecipe}  />
-            <Recipes recipes ={recipes} handleDelete={handleDelete} />
+        <div className="min-h-screen flex flex-col font-sans pt-8">
+            <BrowserRouter>
+                <Header />
+                <main className="flex-grow p-8 text-2xl">
+                    {/*<SearchRecipe />*/}
+                    {/*<RecipeCategories />*/}
+                    <Pages />
+                </main>
+                <Footer />
+            </BrowserRouter>
         </div>
-        
     );
 };
 
