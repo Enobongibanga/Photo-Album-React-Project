@@ -23,7 +23,7 @@ A React application to show different recipes around the world and allows users 
 
 ## Preview
 
-- 
+- https://recipe-app-v51i.onrender.com/
 
 ## Prerequisites
 
