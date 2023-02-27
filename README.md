@@ -16,6 +16,15 @@ A React application to show different recipes around the world and allows users 
 - [Tailwindcss]https://cdn.tailwindcss.com
 - 
 
+
+## Demo Video
+
+- https://app.screencast.com/Z7cBTQJNV1h84
+
+## Preview
+
+- 
+
 ## Prerequisites
 
 The following should be installed in your machine
