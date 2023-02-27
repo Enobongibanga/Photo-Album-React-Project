@@ -1,20 +1,10 @@
 import React from 'react';
-
 import Popular from '../components/ForeignRecipe/Popular';
-import Veggies from '../components/ForeignRecipe/Veggies';
-import RecipeCategories from '../components/RecipeCategories';
-import SearchRecipe from '../components/SearchRecipe';
 
 const Home = () => {
     return (
-        <main>
-            <SearchRecipe />
-
-            <RecipeCategories />
-
+        <main className="mt-10 md:mt-20">
             <Popular />
-
-            <Veggies />
         </main>
     );
 };

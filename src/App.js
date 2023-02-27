@@ -5,8 +5,7 @@ import Pages from './pages/Pages';
 
 import Footer from './components/SiteLayout/Footer';
 import Header from './components/SiteLayout/Header';
-// import RecipeCategories from './components/RecipeCategories';
-// import SearchRecipe from './components/SearchRecipe';
+import RecipeSearch from './components/SearchRecipe/RecipeSearch';
 
 const App = () => {
     return (
@@ -14,8 +13,7 @@ const App = () => {
             <BrowserRouter>
                 <Header />
                 <main className="flex-grow p-8 text-2xl">
-                    {/*<SearchRecipe />*/}
-                    {/*<RecipeCategories />*/}
+                    <RecipeSearch />
                     <Pages />
                 </main>
                 <Footer />
