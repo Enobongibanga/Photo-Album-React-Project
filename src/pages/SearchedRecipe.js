@@ -14,7 +14,7 @@ const SearchedRecipe = () => {
             const recipes = await data.json();
 
             localStorage.setItem('searchedRecipes', JSON.stringify(recipes.recipes));
-            setSearchedRecipes(recipes.results);
+            setSearchedRecipes(recipes.results); 
         }
     };
 
