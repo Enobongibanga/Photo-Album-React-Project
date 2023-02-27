@@ -6,10 +6,9 @@ const RecipeSearch = () => {
     const [input, setInput] = useState('');
     const navigate = useNavigate();
 
-    
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate('/searchitem/'+input)
+        navigate('/searchitem/' + input);
     };
 
     return (
